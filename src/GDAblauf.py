@@ -1,12 +1,20 @@
+from GDElements.Psalm import *
+from GDElements.BibleText import *
+from GDElement import *
+
 class GDAblauf:
 
     # Initialize GDAblauf
-    # Create empty GDAblauf
-    def __init__(self):
-        self.element_list = []
+    # Create empty GDAblauf or initialize with template if given
+    def __init__(self, ablauf_template=None):
 
-    # Initialize GDAblauf from a given template (e.g. Klassische Liturgie mit Abendmajl)
-    def __init__(self, ablauf_template):
+        self.element_list = []
+        if ablauf_template is not None:
+            self.apply_template(ablauf_template)
+
+
+    # Apply a Gottesdienstablauf-Template to the current GDAblauf
+    def apply_template(self, ablauf_template):
         pass
 
     # Add a new GDElement to this GDAblauf (at the end))
@@ -35,3 +43,11 @@ class GDAblauf:
     # Remove an GDElement from this GDAblauf
     def remove_element(self, element):
         self.element_list.remove(element)
+
+    # Printing to console for tsting purposes
+    def print(self):
+        if len(self.element_list) == 0:
+            print("Leerer Gottesdienstablauf")
+        else:
+            for element in self.element_list:
+                element.print()
