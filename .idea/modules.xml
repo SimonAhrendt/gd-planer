@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gd-planer.iml" filepath="$PROJECT_DIR$/.idea/gd-planer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gdplan/.idea/gdplan.iml" filepath="$PROJECT_DIR$/../gdplan/.idea/gdplan.iml" />
     </modules>
   </component>
 </project>
